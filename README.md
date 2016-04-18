@@ -1,4 +1,2 @@
-# Linkd
-Linkd
-
-Test
+# Linkd project
+* El nombre definitivo se sigue buscando
