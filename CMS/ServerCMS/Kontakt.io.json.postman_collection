@@ -1,0 +1,232 @@
+{
+	"id": "ae8ddf79-8879-e48d-35b3-9677a5b2a241",
+	"name": "Kontakt.io",
+	"description": "",
+	"order": [
+		"8c8cfaa1-d1d1-ec97-19f6-6d313f5b4260"
+	],
+	"folders": [
+		{
+			"id": "f74ad403-9d22-720b-e143-3fb0b3cc9735",
+			"name": "Get Devices",
+			"description": "",
+			"order": [
+				"24ed383c-2ef1-11ae-aedb-2f62136c7d42",
+				"a2a691ce-4b50-b348-849c-defa7b899604",
+				"ff7c9724-2327-ccff-213a-0b824bedafdf"
+			],
+			"owner": ""
+		}
+	],
+	"timestamp": 1460209168680,
+	"owner": "144144",
+	"remoteLink": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "24ed383c-2ef1-11ae-aedb-2f62136c7d42",
+			"headers": "api-key: SCfoAPpNWQQBQGIpvLRciZNajCRjfeor\naccept: application/vnd.com.kontakt+json;version=7\nContent-Type: application/x-www-form-urlencoded\n",
+			"url": "https://api.kontakt.io/device",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1460818779423,
+			"name": "Kontakt.io - Device - All devices",
+			"description": "Example of request for devices with the Kontakt.io rest API.",
+			"collectionId": "ae8ddf79-8879-e48d-35b3-9677a5b2a241",
+			"responses": []
+		},
+		{
+			"id": "8c8cfaa1-d1d1-ec97-19f6-6d313f5b4260",
+			"headers": "Api-Key: SCfoAPpNWQQBQGIpvLRciZNajCRjfeor\nAccept: application/vnd.com.kontakt+json; version=7\nConte: application/x-www-form-urlencoded\n",
+			"url": "https://api.kontakt.io/device/update",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "alias",
+					"value": "First Beacon",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "uniqueId",
+					"value": "MCKf",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "deviceType",
+					"value": "beacon",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1460226959350,
+			"name": "Kontakt.io - Device update",
+			"description": "Generated from a curl request: \\ncurl -H \\\"Api-Key: insert-your-api-key-here\\\" -H \\\"Accept: application/vnd.com.kontakt+json; version=8\\\" -X POST -d \\\"alias=egg plant\\\" -d \\\"uniqueId=0xIO\\\" -d \\\"deviceType=beacon\\\" https://api.kontakt.io/device/update",
+			"collectionId": "ae8ddf79-8879-e48d-35b3-9677a5b2a241",
+			"responses": []
+		},
+		{
+			"id": "a2a691ce-4b50-b348-849c-defa7b899604",
+			"headers": "api-key: SCfoAPpNWQQBQGIpvLRciZNajCRjfeor\naccept: application/vnd.com.kontakt+json;version=7\nContent-Type: application/x-www-form-urlencoded\n",
+			"url": "https://api.kontakt.io/venue/dab0fab4-8cbe-4e62-8f32-4b90f6d35b3d",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": [
+				{
+					"key": "alias",
+					"value": "First Beacon",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "uniqueId",
+					"value": "MCKf",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "deviceType",
+					"value": "beacon",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "lng",
+					"value": "-74.097897",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "lat",
+					"value": "4.736534",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "id",
+					"value": "dab0fab4-8cbe-4e62-8f32-4b90f6d35b3d",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "Api-Key",
+					"value": "SCfoAPpNWQQBQGIpvLRciZNajCRjfeor",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "application/vnd.com.kontakt+json; version=7",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1461206803365,
+			"name": "Kontakt.io - Venues",
+			"description": "Example of request for devices with the Kontakt.io rest API.",
+			"collectionId": "ae8ddf79-8879-e48d-35b3-9677a5b2a241",
+			"responses": []
+		},
+		{
+			"id": "ff7c9724-2327-ccff-213a-0b824bedafdf",
+			"headers": "api-key: SCfoAPpNWQQBQGIpvLRciZNajCRjfeor\naccept: application/vnd.com.kontakt+json;version=7\nContent-Type: application/x-www-form-urlencoded\n",
+			"url": "https://api.kontakt.io/device/YDFS",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": [
+				{
+					"key": "alias",
+					"value": "First Beacon",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "uniqueId",
+					"value": "MCKf",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "deviceType",
+					"value": "beacon",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "lng",
+					"value": "-74.097897",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "lat",
+					"value": "4.736534",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "id",
+					"value": "dab0fab4-8cbe-4e62-8f32-4b90f6d35b3d",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "Api-Key",
+					"value": "SCfoAPpNWQQBQGIpvLRciZNajCRjfeor",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "application/vnd.com.kontakt+json; version=7",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1461205744704,
+			"name": "Kontakt.io - Device - Single device copy",
+			"description": "Example of request for devices with the Kontakt.io rest API.",
+			"collectionId": "ae8ddf79-8879-e48d-35b3-9677a5b2a241",
+			"responses": []
+		}
+	]
+}
