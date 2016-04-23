@@ -1,11 +1,11 @@
 from flask import Flask
 from flask_restful import Resource, Api
-
 import requests
 import json
 
 app = Flask(__name__)
 api = Api(app)
+
 
 class KontaktApiGetDevices(Resource):
     def get(self):
