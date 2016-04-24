@@ -15,3 +15,17 @@ def update_beacon(payload):
     response = requests.post(url_complete, data=payload, headers=header)
     return response.json()
 
+
+def get_single_beacon(id):
+    url_complete = url['url_base']+ url['url_device'] + id
+    response = requests.get(url_complete, headers=header)
+    return response.json()
+
+
+def get_venues():
+    url_complete = url['url_base'] + url['url_venues']
+    response = requests.get(url_complete, headers=header)
+    return response.json()
+
+
+## TODO create venues from API
