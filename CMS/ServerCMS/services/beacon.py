@@ -1,5 +1,5 @@
 from flask_restful import Resource, request
-from external_services.kontakt import get_beacons, update_beacon
+from external_services.kontakt.api.kontakt_api import get_beacons, update_beacon
 
 
 class BeaconList(Resource):
