@@ -10,7 +10,7 @@ class BeaconServices(unittest.TestCase):
         data = json.dumps(data)
         response = requests.post(url, headers={'content-type': "application/json"}, data=data)
         print response.content
-        self.assertEqual(True, True)
+        self.assertEqual(response.content, '"Update successful."\n')
 
 
 if __name__ == '__main__':
