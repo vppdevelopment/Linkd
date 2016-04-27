@@ -6,4 +6,3 @@ class GetVenues(Resource):
     def get(self):
         return get_venues()
 
-
