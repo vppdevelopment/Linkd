@@ -15,8 +15,6 @@ def set_user_data(data):
 
 
 def set_user_data_by_id(data, id):
-    print id
-    print data
     result = firebase.post(firebase_routes['users'] + '/' + id, data)
     return result
 
