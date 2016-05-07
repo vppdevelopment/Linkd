@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_restful import Api
 from services.device.device import BeaconList, Beacon, Venue, VenueList
-from services.database.persistance import FirebaseData
+from services.database.persistance import FirebaseData, FirebaseDataById
 
 
 app = Flask(__name__)
@@ -12,6 +12,7 @@ api.add_resource(Beacon, '/devices/<string:device_id>')#, endpoint='device')
 api.add_resource(VenueList, '/customers/')#, endpoint='customers')
 api.add_resource(Venue, '/customer/<string:venue_id>')#, endpoint='venues')
 api.add_resource(FirebaseData, '/data/')
+api.add_resource(FirebaseDataById, '/data/<string:id>')
 
 
 if __name__ == "__main__":

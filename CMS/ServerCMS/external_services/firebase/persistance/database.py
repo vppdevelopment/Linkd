@@ -4,7 +4,7 @@ from external_services.firebase.properties.firebase_conf import config as fireba
 firebase = firebase.FirebaseApplication(firebase_conf['firebase_url'], None)
 
 
-def get_data():
+def get_full_data():
     result = firebase.get(firebase_routes['full_zonar'], None)
     return result
 
@@ -14,7 +14,19 @@ def set_user_data(data):
     return result
 
 
-def get_user(data):
-    result = firebase.get(firebase_routes['users'], data)
+def set_user_data_by_id(data, id):
+    print id
+    print data
+    result = firebase.post(firebase_routes['users'] + '/' + id, data)
+    return result
+
+
+def get_user_data():
+    result = firebase.get(firebase_routes['users'], None)
+    return result
+
+
+def get_user_data_by_id(id):
+    result = firebase.get(firebase_routes['users'] + '/' + id, None)
     return result
 
