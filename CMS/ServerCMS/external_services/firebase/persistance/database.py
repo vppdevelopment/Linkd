@@ -10,7 +10,7 @@ def get_data():
 
 
 def set_user_data(data):
-    result = firebase.post(firebase_routes['users'], data, {'print': 'pretty'}, {'X_FANCY_HEADER': 'VERY FANCY'})
+    result = firebase.post(firebase_routes['users'], data)
     return result
 
 

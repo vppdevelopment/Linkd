@@ -28,4 +28,7 @@ def get_venues():
     return response.json()
 
 
-## TODO create venues from API
+def get_single_venue(venue_id):
+    url_complete = url['url_base'] + url['url_venues'] + venue_id
+    response = requests.get(url_complete, headers=header)
+    return response.json()
