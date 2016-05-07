@@ -3,28 +3,29 @@ from external_services.firebase.properties.firebase_conf import config as fireba
 
 firebase = firebase.FirebaseApplication(firebase_conf['firebase_url'], None)
 
+## TODO POST method usage allows to CREATE a data set
 
-def get_full_data():
-    result = firebase.get(firebase_routes['full_zonar'], None)
+def get_full_data(collection):
+    result = firebase.get(firebase_routes[collection], None)
     return result
 
 
-def set_user_data(data):
-    result = firebase.post(firebase_routes['users'], data)
+def set_data(collection, data):
+    result = firebase.post(firebase_routes[collection], data)
     return result
 
 
-def set_user_data_by_id(data, id):
-    result = firebase.post(firebase_routes['users'] + '/' + id, data)
+def set_data_by_id(collection, data, id):
+    result = firebase.post(firebase_routes[collection] + '/' + id, data)
     return result
 
 
-def get_user_data():
-    result = firebase.get(firebase_routes['users'], None)
+def get_data(collection):
+    result = firebase.get(firebase_routes[collection], None)
     return result
 
 
-def get_user_data_by_id(id):
-    result = firebase.get(firebase_routes['users'] + '/' + id, None)
+def get_data_by_id(collection, id):
+    result = firebase.get(firebase_routes[collection] + '/' + id, None)
     return result
 

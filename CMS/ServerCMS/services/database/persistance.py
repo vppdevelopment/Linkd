@@ -1,20 +1,23 @@
 from flask_restful import Resource, request
-from external_services.firebase.persistance.database import set_user_data, get_user_data, set_user_data_by_id, get_user_data_by_id
+from external_services.firebase.persistance.database import set_data, get_data, set_data_by_id, get_data_by_id
 
+#TODO get this as an arg from the request
+collection = 'users'
 
 class FirebaseData(Resource):
+
     def get(self):
-        return get_user_data()
+        return get_data(collection)
 
     def put(self):
-        return set_user_data(request.json), 201
+        return set_data(collection, request.json), 201
 
 
 class FirebaseDataById(Resource):
     def get(self, id):
-        return get_user_data_by_id(id)
+        return get_data_by_id(collection, id)
 
     def put(self, id):
-        return set_user_data_by_id(request.json, id), 202
+        return set_data_by_id(collection, request.json, id), 202
 
 
