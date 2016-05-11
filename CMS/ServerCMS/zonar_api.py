@@ -1,12 +1,25 @@
 from flask import Flask
-from flask_restful import reqparse, abort, Api, Resource
-from services.device import Device, DeviceList
+from flask_restful import Api
+
+from services.database.core.persistance import FirebaseData, FirebaseDataById
+from services.device.device import BeaconList, Beacon, Venue, VenueList
+from services.resources.campaign import Campaigns, Campaign
+from services.resources.customer import Customers, Customer
+
 app = Flask(__name__)
 api = Api(app)
 
-api.add_resource(DeviceList, '/devices')
-api.add_resource(Device, '/devices/<string:device_id>')
+api.add_resource(BeaconList, '/devices/', endpoint='devices')
+api.add_resource(Beacon, '/devices/<string:device_id>', endpoint='device')
+api.add_resource(VenueList, '/device-customers/', endpoint='venue-list')
+api.add_resource(Venue, '/device-customer/<string:venue_id>', endpoint='venues')
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+api.add_resource(Customer, '/customer/', endpoint='customers')
+api.add_resource(Campaign, '/campaign/', endpoint='campaigns')
+api.add_resource(Customers, '/customer/<string:id_customer>', endpoint='customer')
+api.add_resource(Campaigns, '/campaign/<string:id_customer>/<string:id_campaign>', endpoint='campaign')
+
+if __name__ == "__main__":
+    app.run()
+

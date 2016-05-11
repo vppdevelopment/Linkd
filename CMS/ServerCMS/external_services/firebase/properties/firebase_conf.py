@@ -3,6 +3,6 @@ config = {
 }
 
 routes = {
-    "full_zonar": "/",
-    "users": "/users"
+    "customer": "/customer",
+    "campaign": "/campaign"
 }
