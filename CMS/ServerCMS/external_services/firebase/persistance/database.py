@@ -1,7 +1,10 @@
+import json
 from firebase import firebase
 from external_services.firebase.properties.firebase_conf import config as firebase_conf, routes as firebase_routes
 
 firebase = firebase.FirebaseApplication(firebase_conf['firebase_url'], None)
+
+##TODO Define an schema and normalize it ASAP
 
 '''
 GET: Route of existent item in the document with the 'collection' value
@@ -19,12 +22,12 @@ def get_customer_data(id_customer):
 
 
 def put_customer_data(id_customer, data):
-    result = firebase.put(firebase_routes['customer'] + '/' + id_customer, data)
+    result = firebase.put(firebase_routes['customer'] + '/' + id_customer, id_customer, data)
     return result
 
 
 def post_customer_data(data):
-    result = firebase.put(firebase_routes['customer'], data)
+    result = firebase.put(firebase_routes['customer'], data['id'], data)
     return result
 
 
