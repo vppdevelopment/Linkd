@@ -1,0 +1,133 @@
+{
+  "id_customer":"ktronix",
+  "name": "Ktronix",
+  "website": "www.ktronix.com",
+  "commercial_info": {
+    "nit": "890100577",
+    "ver_digit": "6",
+    "telephone": {
+      "tel_1":"1234567",
+      "tel_2":"1234567890"
+    }
+  },
+  "account_contact": {
+    "name":"gerente",
+    "lastname":"general",
+    "email":"gerentegeneral@ktronix.com",
+    "doc_id":"1234567890",
+    "telephone":{
+      "tel_1":"7654321",
+      "tel_2":"0987654321"
+    },
+    "position":"Marketing Manager"
+  },
+  "branch":{
+    "generatesanuniquebranchid1": {
+      "site": "Av. 68",
+      "address": "Calle falsa 123",
+      "website": "zonar.in/ktronix/obtainsuniqueidafterinsertingdata1",
+      "contact": {
+        "email":"email@email.com",
+        "name":"pepito",
+        "lastname":"perez",
+        "doc_id":"1234567890",
+        "position":"Manager in chief"
+      },
+      "beacon":{
+        "provider":{
+          "kontakt":{
+            "jrx4": {
+              "uuid":"17834-134789-1348761",
+              "url":"www.url.com",
+              "lat": "-1.9127319287",
+              "long": "2.1287123123"
+            },
+            "abcd": {
+              "uuid":"17834-134789-1348761",
+              "url":"www.url.com",
+              "lat": "-1.9127319287",
+              "long": "2.1287123123"
+            }
+          }
+        }
+      },
+      "users":{
+        "generatesanuniqueuserid1": {
+          "created_by": "idsuperuser",
+          "date_created": "YYYYMMDDTHH:MM:SS",
+          "roles": {
+            "rolenameA": {
+              "actions": [1, 2, 3, 4, 5]
+            }
+          },
+          "rolenameB": {
+            "actions": [1]
+          }
+        },
+        "generatesanuniqueuserid2": {
+          "created_by": "idsuperuser",
+          "date_created": "YYYYMMDDTHH:MM:SS",
+          "roles": {
+            "rolenameA": {
+              "actions": [1, 2, 3]
+            }
+          }
+        }
+      }
+    },
+    "generatesauniquebranchid2": {
+      "site": "Salitre",
+      "address": "Calle 26 con 68",
+      "website":"none",
+      "contact": {
+        "email":"email@email.com",
+        "name":"perensejito",
+        "lastname":"jaramillo",
+        "doc_id":"0987654321",
+        "position":"Manager",
+        "profile_id":"generatesanuniqueprofileidinanothercollectionbutlater2"
+      },
+      "beacon":{
+        "provider":{
+        "kontakt":{
+          "jrx4": {
+            "uuid":"17834-134789-1348761",
+            "url":"www.url.com",
+            "lat": "-1.9127319287",
+            "long": "2.1287123123"
+            }
+          }
+        }
+      }
+    }
+  },
+  "beacon_info":{
+    "kontakt":{
+      "venue_id":"1234897ujfasdfn-kjshfkh-1837491",
+      "venue":"ktronix_venue"
+    }
+  },
+  "users":{
+  "generatesanuniqueuserid1": {
+    "created_by": "idsuperuser",
+    "date_created": "YYYYMMDDTHH:MM:SS",
+    "roles": {
+      "rolenameA": {
+        "actions": [1, 2, 3, 4, 5]
+        }
+      },
+    "rolenameB": {
+        "actions": [1]
+        }
+      },
+    "generatesanuniqueuserid2": {
+      "created_by": "idsuperuser",
+      "date_created": "YYYYMMDDTHH:MM:SS",
+      "roles": {
+        "rolenameA": {
+          "actions": [1, 2, 3]
+        }
+      }
+    }
+  }
+}
