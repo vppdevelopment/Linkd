@@ -1,6 +1,6 @@
-import json
 from firebase import firebase
-from external_services.firebase.properties.firebase_conf import config as firebase_conf, routes as firebase_routes
+
+from external_services.firebase.firebase_configuration import config as firebase_conf, routes as firebase_routes
 
 firebase = firebase.FirebaseApplication(firebase_conf['firebase_url'], None)
 

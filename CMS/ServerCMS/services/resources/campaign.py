@@ -1,5 +1,6 @@
-from flask_restful import Resource, request, reqparse
-from external_services.firebase.persistance.database import \
+from flask_restful import Resource, request
+
+from external_services.firebase.firebase_api import \
     get_campaign_data, put_campaign_data, post_campaign_data, delete_campaign_data
 
 

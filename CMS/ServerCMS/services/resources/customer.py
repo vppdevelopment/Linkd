@@ -1,6 +1,8 @@
-from flask_restful import Resource, request, reqparse
-from external_services.firebase.persistance.database import \
+from flask_restful import Resource, request
+
+from external_services.firebase.firebase_api import \
     get_customer_data, put_customer_data, post_customer_data, delete_customer_data
+
 
 ##TODO research the way is used the POST or PUT to create new elements
 ##TODO possibly I have to build a new logic to evaluate when its new and when it exists

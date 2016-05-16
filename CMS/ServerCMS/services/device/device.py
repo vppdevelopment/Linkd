@@ -1,5 +1,6 @@
-from flask_restful import Resource, request, abort, reqparse
-from external_services.kontakt.api.kontakt_api import get_beacons, update_beacon, get_single_beacon, get_venues, get_single_venue
+from flask_restful import Resource, abort
+
+from external_services.kontakt.kontakt_api import get_beacons, get_single_beacon, get_venues, get_single_venue
 
 
 def validate_in_collection(id, element, elementType):

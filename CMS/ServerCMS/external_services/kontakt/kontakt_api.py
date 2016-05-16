@@ -1,6 +1,6 @@
 import requests
 
-from external_services.kontakt.properties.kontakt_conf import kontakt_url as url, headers_base as header
+from external_services.kontakt.kontakt_configuration import kontakt_url as url, headers_base as header
 
 
 def get_beacons():

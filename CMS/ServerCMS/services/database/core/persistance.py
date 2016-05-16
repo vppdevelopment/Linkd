@@ -1,9 +1,9 @@
-from flask_restful import Resource, request, reqparse
-from external_services.firebase.persistance.database import \
+from flask_restful import Resource, request
+
+from external_services.firebase.firebase_api import \
     get_data_by_id, get_data, \
     update_data_by_id, update_data, \
     post_data, post_data_by_id
-
 
 #TODO get this as an arg from the request
 #GET is used to obtain elements
