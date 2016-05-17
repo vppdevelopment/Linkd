@@ -1,34 +1,28 @@
 import requests
 
-from external_services.kontakt.kontakt_configuration import kontakt_url as url, headers_base as header
+from external_services.kontakt import kontakt_config
 
 
 def get_beacons():
-    url_complete = url['url_base']+ url['url_device']
-    response = requests.get(url_complete, headers=header)
+    response = requests.get(kontakt_config.URL_DEVICE, headers=kontakt_config.HEADER_BASE)
     return response.json()
 
 
 def update_beacon(payload):
-    url_complete = url['url_base'] + url['url_device_update']
-    print(url_complete)
-    response = requests.post(url_complete, data=payload, headers=header)
+    response = requests.post(kontakt_config.URL_DEVICE_UPDATE, data=payload, headers=kontakt_config.HEADER_BASE)
     return response.json()
 
 
-def get_single_beacon(id):
-    url_complete = url['url_base']+ url['url_device'] + id
-    response = requests.get(url_complete, headers=header)
+def get_single_beacon(device_id):
+    response = requests.get(kontakt_config.URL_DEVICE_SINGLE.format(device_id), headers=kontakt_config.HEADER_BASE)
     return response.json()
 
 
 def get_venues():
-    url_complete = url['url_base'] + url['url_venues']
-    response = requests.get(url_complete, headers=header)
+    response = requests.get(kontakt_config.URL_VENUES, headers=kontakt_config.HEADER_BASE)
     return response.json()
 
 
 def get_single_venue(venue_id):
-    url_complete = url['url_base'] + url['url_venues'] + venue_id
-    response = requests.get(url_complete, headers=header)
+    response = requests.get(kontakt_config.URL_VENUES_SINGLE.format(venue_id), headers=kontakt_config.HEADER_BASE)
     return response.json()

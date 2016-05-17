@@ -1,10 +1,10 @@
 from firebase import firebase
 
-from external_services.firebase.firebase_configuration import config as firebase_conf, routes as firebase_routes
+from external_services.firebase.firebase_config import config as firebase_conf, routes as firebase_routes
 
-firebase = firebase.FirebaseApplication(firebase_conf['firebase_url'], None)
+firebase_app = firebase.FirebaseApplication(firebase_conf['firebase_url'], None)
 
-##TODO Define an schema and normalize it ASAP
+# TODO Define an schema and normalize it ASAP
 
 '''
 GET: Route of existent item in the document with the 'collection' value
@@ -17,22 +17,22 @@ DELETE: Do I have to say something else?
 
 
 def get_customer_data(id_customer):
-    result = firebase.get(firebase_routes['customer'] + '/' + id_customer, None)
+    result = firebase_app.get(firebase_routes['customer'] + '/' + id_customer, None)
     return result
 
 
 def put_customer_data(id_customer, data):
-    result = firebase.put(firebase_routes['customer'] + '/' + id_customer, id_customer, data)
+    result = firebase_app.put(firebase_routes['customer'] + '/' + id_customer, id_customer, data)
     return result
 
 
 def post_customer_data(data):
-    result = firebase.put(firebase_routes['customer'], data['id'], data)
+    result = firebase_app.put(firebase_routes['customer'], data['id'], data)
     return result
 
 
 def delete_customer_data(id_customer):
-    result = firebase.delete(firebase_routes['customer'], id_customer)
+    result = firebase_app.delete(firebase_routes['customer'], id_customer)
     return result
 
 
@@ -40,22 +40,22 @@ def delete_customer_data(id_customer):
 
 
 def get_campaign_data(id_customer, id_campaign):
-    result = firebase.get(firebase_routes['campaign'] + '/' + id_customer + '/' + id_campaign, None)
+    result = firebase_app.get(firebase_routes['campaign'] + '/' + id_customer + '/' + id_campaign, None)
     return result
 
 
 def put_campaign_data(id_customer, id_campaign, data):
-    result = firebase.put(firebase_routes['campaign'] + '/' + id_customer + '/' + id_campaign, data)
+    result = firebase_app.put(firebase_routes['campaign'] + '/' + id_customer + '/' + id_campaign, data)
     return result
 
 
 def post_campaign_data(id_customer, data):
-    result = firebase.put(firebase_routes['campaign'] + '/' + id_customer, data)
+    result = firebase_app.put(firebase_routes['campaign'] + '/' + id_customer, data)
     return result
 
 
 def delete_campaign_data(id_customer, id_campaign):
-    result = firebase.delete(firebase_routes['campaign'] + '/' + id_customer, id_campaign)
+    result = firebase_app.delete(firebase_routes['campaign'] + '/' + id_customer, id_campaign)
     return result
 
 
@@ -63,33 +63,30 @@ def delete_campaign_data(id_customer, id_campaign):
 
 
 def get_data(collection):
-    result = firebase.get(firebase_routes[collection], None)
+    result = firebase_app.get(firebase_routes[collection], None)
     return result
 
 
 def get_data_by_id(collection, id):
-    result = firebase.get(firebase_routes[collection] + '/' + id, None)
+    result = firebase_app.get(firebase_routes[collection] + '/' + id, None)
     return result
 
 
 def post_data(collection, data):
-    result = firebase.post(firebase_routes[collection], data)
+    result = firebase_app.post(firebase_routes[collection], data)
     return result
 
 
 def post_data_by_id(collection, data):
-    result = firebase.post(firebase_routes[collection] + '/' + id, id, data)
+    result = firebase_app.post(firebase_routes[collection] + '/' + id, id, data)
     return result
 
 
 def update_data(collection, data):
-    result = firebase.put(firebase_routes[collection], data)
+    result = firebase_app.put(firebase_routes[collection], data)
     return result
 
 
 def update_data_by_id(collection, data, id):
-    result = firebase.put(firebase_routes[collection] + '/' + id, id, data)
+    result = firebase_app.put(firebase_routes[collection] + '/' + id, id, data)
     return result
-
-
-

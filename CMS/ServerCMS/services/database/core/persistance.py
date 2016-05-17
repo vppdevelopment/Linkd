@@ -14,11 +14,11 @@ collection = 'users'
 
 
 class FirebaseData(Resource):
-    '''def get(self):
+    """def get(self):
         parser = reqparse.RequestParser()
         parser.add_argument('collection', type=str, help='Collection to be searched' ,location='headers')
         args = parser.parse_args()
-        return get_data(args['collection'])'''
+        return get_data(args['collection'])"""
 
     def get(self):
         return get_data(collection), 200
