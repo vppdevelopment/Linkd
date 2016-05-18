@@ -4,9 +4,8 @@ from external_services.kontakt.kontakt_api import get_beacons, get_single_beacon
 
 
 def validate_in_collection(id, element, elementType):
-    print element
-    if element is None:
-        abort(404, message="{} {} doesn't exist".format(elementType, id))
+    if element['status'] == 404:
+        return abort(404, message="{} {} doesn't exist".format(elementType, id))
     else:
         return element
 
