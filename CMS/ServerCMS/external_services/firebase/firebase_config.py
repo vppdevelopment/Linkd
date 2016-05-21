@@ -4,5 +4,6 @@ config = {
 
 routes = {
     "customer": "/customer",
-    "campaign": "/campaign"
+    "campaign": "/campaign",
+    "demo": "/demo"
 }

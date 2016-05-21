@@ -90,3 +90,10 @@ def update_data(collection, data):
 def update_data_by_id(collection, data, id):
     result = firebase_app.put(firebase_routes[collection] + '/' + id, id, data)
     return result
+
+
+'''Demo'''
+
+def get_demo_message(collection, id_device):
+    result = firebase_app.get(firebase_routes[collection] + '/' + id_device, None)
+    return result

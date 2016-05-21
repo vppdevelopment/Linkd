@@ -37,14 +37,10 @@
         "provider":{
           "kontakt":{
             "jrx4": {
-              "uuid":"17834-134789-1348761",
-              "url":"www.url.com",
               "lat": "-1.9127319287",
               "long": "2.1287123123"
             },
             "abcd": {
-              "uuid":"17834-134789-1348761",
-              "url":"www.url.com",
               "lat": "-1.9127319287",
               "long": "2.1287123123"
             }
@@ -99,12 +95,6 @@
           }
         }
       }
-    }
-  },
-  "beacon_info":{
-    "kontakt":{
-      "venue_id":"1234897ujfasdfn-kjshfkh-1837491",
-      "venue":"ktronix_venue"
     }
   },
   "users":{
