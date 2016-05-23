@@ -1,6 +1,5 @@
 import unittest
 import requests
-import json
 
 
 class BeaconServices(unittest.TestCase):
@@ -20,13 +19,6 @@ class BeaconServices(unittest.TestCase):
         result = requests.get(url)
         self.assertEqual(result.status_code, 404)
 
-    def temp_toUpdateBeacon(self):
-        url = 'http://localhost:5000/devices/jx53'
-        data = {'uniqueId': 'MCKf', 'alias': 'Third Beacon', 'deviceType': 'beacon'}
-        data = json.dumps(data)
-        response = requests.post(url, headers={'content-type': "application/json"}, data=data)
-        print response.content
-        self.assertEqual(response.content, '"Update successful."\n')
 
 if __name__ == '__main__':
     unittest.main()
