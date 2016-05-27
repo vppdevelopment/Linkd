@@ -19,6 +19,10 @@ class BeaconServices(unittest.TestCase):
         result = requests.get(url)
         self.assertEqual(result.status_code, 404)
 
+    def test_get_message_beacon(self):
+        url = 'http://localhost:5000/message/YDFS'
+        result = requests.get(url)
+        self.assertEqual(result.status_code, 200)
 
 if __name__ == '__main__':
     unittest.main()
